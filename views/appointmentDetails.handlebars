@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+        }
+        form {
+            background: #f2f2f2;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .form-group {
+            margin-bottom: 10px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="date"],
+        input[type="time"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            margin-right: 10px;
+        }
+        .button-group {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Existing Appointment</h2>
+
+    <form id="appointmentForm" class="form-group">
+        <label>First Name:</label>
+        <input type="text" name="first_name" value="{{appointment.first_name}}" required>
+
+        <label>Last Name:</label>
+        <input type="text" name="last_name" value="{{appointment.last_name}}" required>
+
+        <label>D.O.B:</label>
+        <input type="date" name="date_of_birth" value="{{appointment.date_of_birth}}" required>
+
+        <label>Phone #:</label>
+        <input type="text" name="phone_number" value="{{appointment.phone_number}}" required>
+
+        <label>Date:</label>
+        <input type="date" name="date" value="{{appointment.date}}" required>
+
+        <label>Time:</label>
+        <input type="time" name="time" value="{{appointment.time}}" required>
+
+        <label>Reason for appointment:</label>
+        <textarea name="reason" required>{{appointment.reason}}</textarea>
+
+        <div class="button-group">
+            <button type="submit">Update</button>
+            <button type="button" id="removeButton">Remove</button>
+        </div>
+    </form>
+</div>
+
+<script>
+    document.getElementById('appointmentForm').onsubmit = function(event) {
+        event.preventDefault();
+        // TODO: Add AJAX call to update the appointment
+        
+    };
+    
+    document.getElementById('removeButton').onclick = function() {
+        // TODO: Add AJAX call to remove the appointment
+        
+    };
+</script>
+
+</body>
+</html>
