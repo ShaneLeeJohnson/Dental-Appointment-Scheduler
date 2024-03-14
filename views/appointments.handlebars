@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Appointments Calendar</title>
-    <link rel="stylesheet" href="/css/calendar.css">
     <style>
         .day {
             border: 1px solid #ccc;
@@ -26,20 +25,41 @@
     </style>
 </head>
 <body>
+    <div class="column">
+        <div id="navbar">
 
-<h1>Appointments Calendar</h1>
-
-<div id="calendar">
-    {{#each appointments}}
-        <div class="day">
-            <div class="date">{{this.date}}</div>
-            <!-- Update the div to an anchor tag -->
-            <a href="/appointments/{{this.id}}" class="appointment">
-                {{this.time}} - {{this.first_name}} {{this.last_name}}
-            </a>
         </div>
-    {{/each}}
-</div>
+        <div id="background-appointments">
+            <div>
+                <div id="current-date">
+                    <p class="date">{{this.date}}</p>
+                </div>
+                <button id="expand-arrow">
+
+                </button>
+            </div>
+            <div id="appointments-holder">
+                <button>
+                    <p>{{this.first_name}} {{this.last_name}}</p>
+                    <p>{{this.phone_number}}</p>
+                    <p>{{this.time}}</p>
+                    <p>A.R.</p>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="calendar">
+        {{#each appointments}}
+            <div class="day">
+                <div class="date">{{this.date}}</div>
+                <!-- Update the div to an anchor tag -->
+                <a href="/appointments/{{this.id}}" class="appointment">
+                    {{this.time}} - {{this.first_name}} {{this.last_name}}
+                </a>
+            </div>
+        {{/each}}
+    </div>
 
 </body>
 </html>
