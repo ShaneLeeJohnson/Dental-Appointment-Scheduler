@@ -36,6 +36,10 @@ Appointment.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
+        reason: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
         user_id: {
             type: DataTypes.INTEGER,
             references: {

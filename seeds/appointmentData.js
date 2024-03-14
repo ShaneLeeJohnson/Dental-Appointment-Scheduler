@@ -8,6 +8,7 @@ const appointmentData = [
     phone_number: "555-555-5555",
     date: new Date("2024-03-15"),
     time: "10:00 AM",
+    reason: "Cavities",
     user_id: 1,
   },
   {
@@ -17,6 +18,7 @@ const appointmentData = [
     phone_number: "123-456-7890",
     date: new Date("2024-03-18"),
     time: "2:00 PM",
+    reason: "Tooth loss",
     user_id: 1,
   },
   {
@@ -26,6 +28,7 @@ const appointmentData = [
     phone_number: "987-654-3210",
     date: new Date("2024-03-20"),
     time: "11:00 AM",
+    reason: "Bad breath",
     user_id: 1,
   },
   {
@@ -35,6 +38,7 @@ const appointmentData = [
     phone_number: "000-111-2222",
     date: new Date("2024-03-22"),
     time: "4:00 PM",
+    reason: "Tooth loss",
     user_id: 1,
   },
   {
@@ -44,6 +48,7 @@ const appointmentData = [
     phone_number: "777-888-9999",
     date: new Date("2024-03-25"),
     time: "1:30 PM",
+    reason: "Clean teeth",
     user_id: 1,
   },
 ];
