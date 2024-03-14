@@ -42,7 +42,7 @@ router.post('/appointment', async (req, res) => {
         }
     } else {
         // If no user is logged in, redirect to the login page.
-        res.redirect('/login');
+        res.redirect('/');
     }
 });
 
@@ -52,7 +52,7 @@ router.get('/appointments', async (req, res) => {
     try {
         // Redirect to login page if user is not logged in
         if (!req.session.loggedIn) {
-            res.redirect('/login');
+            res.redirect('/');
             return;
         }
 
