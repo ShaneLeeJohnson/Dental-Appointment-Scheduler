@@ -54,13 +54,13 @@
         <input type="text" name="last_name" value="{{appointment.last_name}}" required>
 
         <label>D.O.B:</label>
-        <input type="date" name="date_of_birth" value="{{appointment.date_of_birth}}" required>
+        <input type="date" name="date_of_birth" value="{{formatDate appointment.date_of_birth}}" required>
 
         <label>Phone #:</label>
         <input type="text" name="phone_number" value="{{appointment.phone_number}}" required>
 
-        <label>Date:</label>
-        <input type="date" name="date" value="{{appointment.date}}" required>
+        <label>Date of Appointment:</label>
+        <input type="date" name="date" value="{{formatDate appointment.date}}" required>
 
         <label>Time:</label>
         <input type="time" name="time" value="{{appointment.time}}" required>
