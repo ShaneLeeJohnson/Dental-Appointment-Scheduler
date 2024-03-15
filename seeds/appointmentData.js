@@ -1,6 +1,9 @@
+// Import the Appointment model from the models directory
 const { Appointment } = require('../models');
 
+// Define an array of appointment objects representing sample data
 const appointmentData = [
+  // appointment objects with details like name, date, reason, etc.
   {
     first_name: "John",
     last_name: "Doe",
@@ -53,6 +56,8 @@ const appointmentData = [
   },
 ];
 
+// Function to seed appointments in bulk
 const seedAppointments = () => Appointment.bulkCreate(appointmentData);
 
+// Export the seedAppointments function for use in other parts of the application
 module.exports = seedAppointments;
