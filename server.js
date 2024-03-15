@@ -12,7 +12,9 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-const hbs = exphbs.create({ helpers });
+const hbs = exphbs.create({ 
+    helpers: helpers
+});
 
 const sess = {
     secret: 'Super secret secret',
@@ -35,6 +37,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
 app.use('/', appointmentRoutes);
+app.use(express.static('public'));
 
 sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () => console.log('Now listening'));
