@@ -17,8 +17,11 @@ const PORT = process.env.PORT || 3001;
 
 // Configure Handlebars templating engine with custom helpers
 const hbs = exphbs.create({
-    helpers: helpers
+    helpers: {
+      ...helpers,
+    }
 });
+
 
 // Middleware for session management with Sequelize store
 const sess = {
