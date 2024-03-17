@@ -1,39 +1,23 @@
 <link rel="stylesheet" href="/css/appointments.css">
 
 <body>
-
-<!-- Navigation bar -->
-<div class="navbar">
-    <div class="container">
-        <nav>
-            <ul>
-                <li><a href="/appointments">Appointments</a></li>
-                <li><a href="/register">New Appointments</a></li>
-                <li><a href="/logout">Log Out</a></li>
-                <!-- Add more navigation links as needed -->
-            </ul>
-        </nav>
-    </div>
-</div>
-
-<div class="container">
-    <!-- Your existing content goes here -->
-
-<h1>Appointments Calendar</h1>
-
-<div id="calendar">
-    {{#each appointments}}
-        <div class="day">
-            <div class="date">{{this.date}}</div>
-            <!-- Update the div to an anchor tag -->
-            <a href="/appointments/{{this.id}}" class="appointment">
-                {{this.time}} - {{this.first_name}} {{this.last_name}}
-            </a>
+    <div class="column">
+        <div class="navbar">    <!-- Navigation bar -->
+            <div class="container">
+                <nav>
+                    <ul>
+                        <li><a href="/appointments">Appointments</a></li>
+                        <li><a href="/register">New Appointments</a></li>
+                        <li><a href="/logout">Log Out</a></li>
+                        <!-- Add more navigation links as needed -->
+                    </ul>
+                </nav>
+            </div>
         </div>
-    {{/each}}
-</div>
-
+        <div class="container column">
+            <!-- HTML dynamically loaded here -->
+        </div>
+    </div>
 </body>
 
 <script src="/js/appointment.js"></script>
-
