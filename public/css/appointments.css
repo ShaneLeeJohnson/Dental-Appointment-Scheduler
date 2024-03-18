@@ -121,6 +121,11 @@ h1 {
     margin-right: 50px;
 }
 
+.appointment:hover {
+    cursor: pointer;
+    background-color: #8adbfc;
+}
+
 #background-appointments {
 
 }
