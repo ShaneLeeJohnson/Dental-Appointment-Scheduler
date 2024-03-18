@@ -1,39 +1,42 @@
 <link rel="stylesheet" href="/css/appointments.css">
 
 <body>
-
-<!-- Navigation bar -->
-<div class="navbar">
-    <div class="container">
-        <nav>
-            <ul>
-                <li><a href="/appointments">Appointments</a></li>
-                <li><a href="/register">New Appointments</a></li>
-                <li><a href="/logout">Log Out</a></li>
-                <!-- Add more navigation links as needed -->
-            </ul>
-        </nav>
-    </div>
-</div>
-
-<div class="container">
-    <!-- Your existing content goes here -->
-
-<h1>Appointments Calendar</h1>
-
-<div id="calendar">
-    {{#each appointments}}
-        <div class="day">
-            <div class="date">{{this.date}}</div>
-            <!-- Update the div to an anchor tag -->
-            <a href="/appointments/{{this.id}}" class="appointment">
-                {{this.time}} - {{this.first_name}} {{this.last_name}}
-            </a>
+    <div class="navbar"><!-- Navigation bar -->
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="/appointments">Appointments</a></li>
+                    <li><a href="/register">New Appointments</a></li>
+                    <li><a href="/logout">Log Out</a></li>
+                    <!-- Add more navigation links as needed -->
+                </ul>
+            </nav>
         </div>
-    {{/each}}
-</div>
-
+    </div>
+    <div class="container column" id="background-appointments">
+        <!-- Your existing content goes here -->
+    </div>
+    {{!-- <h1>Appointments Calendar</h1>
+    <div id="calendar">
+        {{#each appointments}}
+            <div class="day">
+                <div class="date">{{this.date}}</div>
+                <!-- Update the div to an anchor tag -->
+                <a href="/appointments/{{this.id}}" class="appointment">
+                    {{this.time}} - {{this.first_name}} {{this.last_name}}
+                </a>
+            </div>
+        {{/each}}
+    </div> --}}
 </body>
 
 <script src="/js/appointment.js"></script>
+<script>
+    // Parse appointments data from JSON string to JavaScript object
+    var appointmentsJSON = '{{appointmentsJSON}}';
+    appointmentsJSON = appointmentsJSON.replace(/&quot;/g, '"'); // Replace all occurrences of &quot; with "
+    appointments = JSON.parse(appointmentsJSON);
+    // Pass the appointments data to the client-side js file
+    processAppointments(appointments);
+</script>
 

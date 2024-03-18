@@ -1,17 +1,154 @@
-.day {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin: 5px;
-    display: inline-block;
-    width: 100px;
-    height: 150px;
-    overflow: auto;
+body {
+    background: grey;
+    font-family: 'Arial', sans-serif;
+    /* background-color: #e8f0f2;  */
+    margin: 0;
+    padding: 0;
 }
-.appointment {
-    cursor: pointer;
-    background-color: #f0f0f0;
-    margin: 2px;
-    padding: 2px;
-    display: block;
+
+.navbar {
+    background-color: #255f85; 
+    color: white;
+    padding: 10px 0;
+}
+
+.navbar .container nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     text-align: center;
 }
+
+.navbar nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.navbar nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar nav ul li a:hover {
+    background-color: #4b8ab9; 
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    max-width: 1000px; 
+    text-align: center;
+}
+
+h1 {
+    color: #255f85;
+    text-align: center;
+    margin: 20px 0;
+}
+
+#calendar {
+    margin-top: 20px;
+}
+
+.day {
+    border: 1px solid #ccc;
+    background-color: #ffffff;
+    padding: 15px;
+    margin: 10px;
+    display: inline-block;
+    width: 200px; 
+    height: auto; 
+    vertical-align: top;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.appointment-info {
+    margin-bottom: 10px;
+}
+
+.appointment-info > div {
+    font-size: 14px;
+    margin: 5px 0;
+    color: #255f85; 
+}
+
+.details-link {
+    display: block;
+    padding: 8px;
+    background-color: #5cb85c; 
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    background-image: linear-gradient(rgb(204, 232, 255), #2998ff);
+    height: 140px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 30px;
+    border: black 4px solid;
+}
+
+.current-date {
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+    height: 100%;
+}
+
+.appointments-holder {
+    
+}
+
+.appointment {
+    background-color: #a1e4ff;
+    width: 120px;
+    height: 140px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.appointment:hover {
+    cursor: pointer;
+    background-color: #8adbfc;
+}
+
+#background-appointments {
+
+}
+
+
+.details-link:hover {
+    background-color: #449d44; 
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    .day {
+        width: 45%; 
+        margin: 5px;
+    }
+}
+/* .container {
+    display: flex;
+    flex-direction: row;
+    width: 70vw;
+} */
