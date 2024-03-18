@@ -122,4 +122,4 @@ Kyle Huff: I created files and code for register, appointments and appointmentDe
 
 Danny Sanchez: I created the dynamic layout for the appoinments handlebars, I was responsible for loading all the appointments up to 2 months in the future. I worked on styling for the page, and I also worked on the appointment.js file.
 
-Matthew Garza:
+Matthew Garza: I created the navigation bar and helped with some of the styling for it. I also helped with some of the styling for the login page as well. 

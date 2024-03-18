@@ -1,0 +1,38 @@
+/* main.css */
+
+/* Navigation bar styles */
+.navbar {
+    background-color: #3498db; /* Set the background color to blue */
+    color: #fff; /* Set text color to white */
+    padding: 10px 0; /* Add padding to the top and bottom */
+}
+
+.container {
+    max-width: 1200px; /* Limit the width of the container */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 0 20px; /* Add padding to the sides of the container */
+}
+
+.navbar h1 {
+    margin: 0; /* Remove margin for the heading */
+}
+
+.navbar ul {
+    list-style-type: none; /* Remove bullet points from the list */
+    margin: 0; /* Remove margin for the list */
+    padding: 0; /* Remove padding for the list */
+}
+
+.navbar ul li {
+    display: inline-block; /* Display list items horizontally */
+    margin-right: 20px; /* Add spacing between list items */
+}
+
+.navbar ul li a {
+    color: #fff; /* Set link text color to white */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.navbar ul li a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
