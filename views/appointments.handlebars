@@ -1,23 +1,29 @@
 <link rel="stylesheet" href="/css/appointments.css">
 
 <body>
-    <div class="column">
-        <div class="navbar">    <!-- Navigation bar -->
+    <div class="row">
+        <div class="navbar">
             <div class="container">
                 <nav>
                     <ul>
                         <li><a href="/appointments">Appointments</a></li>
                         <li><a href="/register">New Appointments</a></li>
                         <li><a href="/logout">Log Out</a></li>
-                        <!-- Add more navigation links as needed -->
                     </ul>
                 </nav>
             </div>
         </div>
-        <div class="container column">
-            <!-- HTML dynamically loaded here -->
+        <div class="container row" id="background-appointments">
+            <!-- Container for dynamically loaded appointments -->
         </div>
     </div>
 </body>
 
 <script src="/js/appointment.js"></script>
+<script>
+    // Assign appointments data to a JavaScript variable
+    var appointments = {{appointments}};
+    console.log(appointments);
+    // Pass the appointments data to the client-side js file
+    processAppointments(appointments);
+</script>

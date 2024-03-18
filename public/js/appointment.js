@@ -1,8 +1,13 @@
-// Import necessary modules
-const loadAppointments = require('./loadAppointments');
+let appointments = []; // Initialize appointments as an empty array
+
+// Function to receive appointments data
+function processAppointments(data) {
+    appointments = data;
+    console.log(appointments);
+}
 
 // Function to create and append date divs for the next two months
-const appendDateDivs = async () => {
+const appendDateDivs = () => {
     const container = document.getElementById('background-appointments');
     const currentDate = new Date();
     const twoMonthsFromNow = new Date(currentDate);
@@ -12,19 +17,23 @@ const appendDateDivs = async () => {
     while (currentDate < twoMonthsFromNow) {
         // Create a div for each date
         const dateDiv = document.createElement('div');
-        dateDiv.id = 'current-date';
-        dateDiv.innerHTML = `<p class="date">${currentDate.toISOString().split('T')[0]}</p>`;
+        dateDiv.classList.add('current-date');
+        dateDiv.innerHTML = `<p class="date">${currentDate.toLocaleDateString()}</p>`;
+        
+        // Append dateDiv to the container
         container.appendChild(dateDiv);
 
-        // Fetch appointments for the current date
-        const appointments = await loadAppointments(currentDate);
+        // Filter appointments for the current date
+        const appointmentsForDate = appointments.filter(appointment =>
+            new Date(appointment.date).toDateString() === currentDate.toDateString()
+        );
 
         // Create a div to hold appointments for the current date
         const appointmentsHolder = document.createElement('div');
-        appointmentsHolder.id = 'appointments-holder';
+        appointmentsHolder.classList.add('appointments-holder');
 
-        // Loop through appointments and create buttons for each appointment
-        appointments.forEach(appointment => {
+        // Loop through appointments for the current date and create buttons
+        appointmentsForDate.forEach(appointment => {
             // Create appointment button
             const appointmentButton = document.createElement('a');
             appointmentButton.classList.add('appointment'); // Add class for styling
@@ -33,13 +42,13 @@ const appendDateDivs = async () => {
                 <p>${appointment.first_name} ${appointment.last_name}</p>
                 <p>${appointment.phone_number}</p>
                 <p>${appointment.time}</p>
-                <p>A.R.</p>
+                <p>${appointment.reason}</p>
             `;
             appointmentsHolder.appendChild(appointmentButton);
         });
 
-        // Append appointments holder to the container
-        container.appendChild(appointmentsHolder);
+        // Append appointmentsHolder to the dateDiv
+        dateDiv.appendChild(appointmentsHolder);
 
         // Move to the next day
         currentDate.setDate(currentDate.getDate() + 1);
