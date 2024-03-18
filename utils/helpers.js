@@ -2,6 +2,10 @@ function formatDate(date) {
     return date.toISOString().split('T')[0];
 }
 
+function json(context) {
+    return JSON.stringify(context);
+}
+
 function format12Hour(time) {
     let [hours, minutes] = time.split(':');
     hours = parseInt(hours, 10); // Convert hours to an integer to remove any leading zeros
@@ -12,6 +16,7 @@ function format12Hour(time) {
 
 module.exports = {
     formatDate,
+    json,
     format12Hour,
     // ... other helpers ...
 };

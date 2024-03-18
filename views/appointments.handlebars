@@ -1,42 +1,41 @@
 <link rel="stylesheet" href="/css/appointments.css">
 
 <body>
-
-<!-- Navigation bar -->
-<div class="navbar">
-    <div class="container">
-        <nav>
-            <ul>
-                <li><a href="/appointments">Appointments</a></li>
-                <li><a href="/register">New Appointments</a></li>
-                <li><a href="/logout">Log Out</a></li>
-                <!-- Add more navigation links as needed -->
-            </ul>
-        </nav>
+    <div class="navbar"><!-- Navigation bar -->
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="/appointments">Appointments</a></li>
+                    <li><a href="/register">New Appointments</a></li>
+                    <li><a href="/logout">Log Out</a></li>
+                    <!-- Add more navigation links as needed -->
+                </ul>
+            </nav>
+        </div>
     </div>
-</div>
-
-<div class="container">
-
-<h1>Appointments </h1>
-
-<div id="calendar">
+    <div class="container column" id="background-appointments">
+        <!-- Your existing content goes here -->
+    </div>
+    {{!-- <h1>Appointments Calendar</h1>
+    <div id="calendar">
         {{#each appointments}}
             <div class="day">
-                <div class="appointment-info">
-                    <div class="date">{{formatDate this.date}}</div>
-                    <div class="name">{{this.first_name}} {{this.last_name}}</div>
-                    <div class="phone">{{this.phone_number}}</div>
-                    <div class="time">{{format12Hour this.time}}</div>
-                    <div class="reason">{{this.reason}}</div>
-                </div>
-                <a href="/appointments/{{this.id}}" class="details-link">Appointment Details</a>
+                <div class="date">{{this.date}}</div>
+                <!-- Update the div to an anchor tag -->
+                <a href="/appointments/{{this.id}}" class="appointment">
+                    {{this.time}} - {{this.first_name}} {{this.last_name}}
+                </a>
             </div>
         {{/each}}
-    </div>
-</div>
-
+    </div> --}}
 </body>
 
 <script src="/js/appointment.js"></script>
-
+<script>
+    // Parse appointments data from JSON string to JavaScript object
+    var appointmentsJSON = '{{appointmentsJSON}}';
+    appointmentsJSON = appointmentsJSON.replace(/&quot;/g, '"'); // Replace all occurrences of &quot; with "
+    appointments = JSON.parse(appointmentsJSON);
+    // Pass the appointments data to the client-side js file
+    processAppointments(appointments);
+</script>
