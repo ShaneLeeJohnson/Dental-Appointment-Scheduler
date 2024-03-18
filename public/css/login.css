@@ -1,60 +1,72 @@
-/* Navbar styles */
-.navbar {
-    background-color: blue; /* Set the background color to blue */
-    color: white; /* Set the text color to white */
-    padding: 10px; /* Add padding to the navbar */
-    display: flex; /* Use flexbox for layout */
-    justify-content: space-between; /* Align items with space between them */
-    align-items: center; /* Center align items vertically */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e8f0f2; 
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
 }
 
-.navbar-brand {
-    font-size: 24px; /* Set font size for the brand */
-}
-
-.navbar-links a {
-    color: white; /* Set link text color to white */
-    text-decoration: none; /* Remove default underline */
-    margin-right: 20px; /* Add spacing between links */
-}
-
-.navbar-links a:hover {
-    text-decoration: underline; /* Add underline on hover */
-}
-
-/* Center align login form */
-.container {
-    width: 300px; /* Set width of the container */
-    margin: 0 auto; /* Center align the container */
-    text-align: center; /* Center align the content */
+h1 {
+    color: #255f85; 
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 form {
-    margin-top: 50px; /* Add top margin to the form */
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 400px; 
+    margin: 0 auto; 
 }
 
-/* Center align form labels */
-form label {
-    display: block; /* Display labels as blocks */
-    text-align: left; /* Left align text within labels */
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #255f85; 
 }
 
-/* Center align form inputs */
-form input[type="text"],
-form input[type="password"] {
-    width: 100%; /* Set input width to 100% */
-    margin-bottom: 10px; /* Add bottom margin to inputs */
+input[type="text"],
+input[type="password"] {
+    width: calc(100% - 20px); 
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #d1e8ff; 
+    border-radius: 5px;
+    font-size: 14px;
 }
 
-form button {
-    width: 100%; /* Set button width to 100% */
-    padding: 10px; /* Add padding to the button */
-    background-color: blue; /* Set button background color to blue */
-    color: white; /* Set button text color to white */
-    border: none; /* Remove button border */
-    cursor: pointer; /* Add pointer cursor on hover */
+button {
+    padding: 15px 25px;
+    border: none;
+    background-color: #5cb85c; 
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    display: block; 
+    width: 100%;
+    margin-top: 10px; 
 }
 
-form button:hover {
-    background-color: darkblue; /* Darken button color on hover */
+button:hover {
+    background-color: #449d44; /
+}
+
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    form {
+        width: 90%;
+        margin-top: 20px; 
+    }
 }
