@@ -66,9 +66,9 @@ router.get('/appointments', async (req, res) => {
 
         // Convert the sequelize data into a plain object
         const appointments = appointmentData.map(appointment => appointment.get({ plain: true }));
-
+        const appointmentsJSON = JSON.stringify(appointments);
         // Render the 'appointments' view, passing the appointments data to it
-        res.render('appointments', { appointments });
+        res.render('appointments', { appointments, appointmentsJSON });
     } catch (err) {
         // Log any errors and send a 500 internal server error response
         console.error('Error fetching appointments:', err);
