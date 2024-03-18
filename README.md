@@ -120,6 +120,6 @@ Shane Johnson: Repository host and project leader. Created the connection.js, se
 
 Kyle Huff: I created files and code for register, appointments and appointmentDetails handlebars as well as the appointmentRoutes.js controller file for these webpages. I did the styling for register, appointments and appointmentDetails. I Created the public folder and the JS and CSS files contained within them to maintain file structure. I also connected  the handlebar pages with their respective JS and CSS files. I created two helper codes to have our data correctly displayed on our website.  I updated code in server.js, controllers/index.js to insure the connectivity with the webpages. Assisted with the updating the README.
 
-Danny Sanchez:
+Danny Sanchez: I created the dynamic layout for the appoinments handlebars, I was responsible for loading all the appointments up to 2 months in the future. I worked on styling for the page, and I also worked on the appointment.js file.
 
 Matthew Garza:
