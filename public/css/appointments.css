@@ -1,5 +1,5 @@
 body {
-    background: grey;
+    background-color: #e8f0f2; /* Light blue background */
     font-family: 'Arial', sans-serif;
     /* background-color: #e8f0f2;  */
     margin: 0;
@@ -35,12 +35,21 @@ body {
     background-color: #4b8ab9; 
 }
 
-.container {
+.container.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: calc(100vh - 60px);
+    padding: 20px;
+}
+
+/* .container {
     width: 80%;
     margin: auto;
     max-width: 1000px; 
     text-align: center;
-}
+} */
 
 h1 {
     color: #255f85;
@@ -107,18 +116,30 @@ h1 {
     align-items: center;
     margin-left: 50px;
     height: 100%;
+    font-weight: bold;
 }
 
 .appointments-holder {
-    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
 }
 
 .appointment {
-    background-color: #a1e4ff;
-    width: 120px;
+    background-color: #ffffff;
+    width: 150px;
     height: 140px;
-    margin-left: 50px;
-    margin-right: 50px;
+    padding: 15px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .appointment:hover {
@@ -127,13 +148,24 @@ h1 {
 }
 
 #background-appointments {
-
+    width: 100%;
+    max-width: 1000px; /* Adjust as needed for your layout */
+    margin: 20px auto;
 }
 
 
 .details-link:hover {
-    background-color: #449d44; 
+    padding: 8px;
+    background-color: #5cb85c; /* Bright green button */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+    width: fit-content;
+    align-self: center;
 }
+
 
 
 @media (max-width: 768px) {
@@ -147,6 +179,8 @@ h1 {
         margin: 5px;
     }
 }
+
+
 /* .container {
     display: flex;
     flex-direction: row;
