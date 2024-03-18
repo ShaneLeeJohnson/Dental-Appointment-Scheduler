@@ -109,10 +109,6 @@ h1 {
     height: 100%;
 }
 
-.appointments-holder {
-    
-}
-
 .appointment {
     background-color: #a1e4ff;
     width: 120px;
@@ -126,15 +122,9 @@ h1 {
     background-color: #8adbfc;
 }
 
-#background-appointments {
-
-}
-
-
 .details-link:hover {
     background-color: #449d44; 
 }
-
 
 @media (max-width: 768px) {
     .container {
